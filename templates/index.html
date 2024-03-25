@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+    <div class="head">
+        <h2>Register Account</h2>
+    </div>
+    <div class="container">
+        <form action="/" method="post" id="register-form">
+            <div class="input-fields">
+                <p>Please Enter Correct Details</p>
+                <div class="input-field ">
+                    <label for="name">Enter Name<i class="fa-regular fa-circle-user"></i></label>
+                    <div class="inp">
+                        <input oninput="testname()" type="text" name="name" id="name" placeholder="Enter Name Here..." autocomplete="given-name">
+                        <div class="icons">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                    <p>This Is Error Message</p>
+                </div>
+                <div class="input-field">
+                    <label for="email">Enter Email <i class="fa-regular fa-envelope"></i></label>
+                    <div class="inp">
+                        <input type="email" oninput="testemail()" name="email" id="email"
+                            placeholder="Enter Email Here..." autocomplete="email">
+                        <div class="icons">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                    <p>This Is Error Message</p>
+                </div>
+                <div class="input-field">
+                    <label for="password">Enter Password <i class="fa-regular fa-lock"></i></label>
+                    <div class="inp">
+                        <input type="password" onblur="checkpass()" onclick="checkpass()" onfocus="checkpass()"
+                            oninput="checkpass()" name="password" id="password" placeholder="Enter Password Here...">
+                        <div class="view-pas">
+                            <i onclick="showpas('password',this)" class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                    <p>This Is Error Message</p>
+                </div>
+                <div class="input-field">
+                    <label for="cnfpas">Confirm Password <i class="fa-regular fa-lock"></i></label>
+                    <div class="inp">
+                        <input type="password" onblur="confirmpass()" onclick="confirmpass()" onfocus="confirmpass()"
+                            oninput="confirmpass()" name="cnfpas" id="cnfpas" placeholder="Confirm Password Here...">
+                        <div class="view-pas">
+                            <i onclick="showpas('cnfpas',this)" class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                    </div>
+                    <p>This Is Error Message</p>
+                </div>
+                <div class="details">
+                    <ul>
+                        <li>Password Must Contain Minimum 6 Characters</li>
+                        <li>Password Must Contain Atlease One Capital Letter</li>
+                        <li>Password Must Contain Atlease One Small Letter</li>
+                        <li>Password Must Contain Atlease One Special Character</li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+        <div class="submit" onclick="submit_form()">
+            <button type="button" onclick="submit_form()">Register</button>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+</body>
+
+</html>

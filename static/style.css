@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.head {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-fields p {
+    text-align: center;
+    display: none;
+    color: red;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-fields {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px #6900d150;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    background-color: inherit;
+    color: white;
+}
+
+.submit {
+    cursor: pointer;
+    background-color: #6900d1;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.submit:hover {
+    transform: scale(1.01);
+    background-color: #6900d1f0;
+}
+
+.submit:hover button {
+    background-color: transparent;
+}
+
+.fa-arrow-right {
+    margin-left: 10px;
+    color: white;
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.inp {
+    padding: 7px 5px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #6900d180;
+    border-radius: 5px;
+}
+
+label {
+    margin-left: 5px;
+}
+
+.icons {
+    display: none;
+    position: relative;
+    width: 16px;
+}
+
+.input-field input {
+    height: 18px;
+    width: 300px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+}
+
+.input-field p {
+    display: none;
+    color: #ff00009e;
+    text-align: left;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.fa-circle-check {
+    display: none;
+    color: #00ad00;
+    font-size: 15px;
+}
+
+.fa-circle-exclamation {
+    display: none;
+    color: red;
+    font-size: 15px;
+}
+
+.green {
+    border: 2px solid #00800075 !important;
+}
+
+.red {
+    border: 2px solid #ff00009e;
+}
+
+.red .icons .fa-circle-exclamation, .red .icons, .green .icons .fa-circle-check, .green .icons {
+    display: block;
+}
+
+.red input, .green input {
+    width: 280px;
+}
+
+ul {
+    margin: 0 0 0 20px;
+}
+
+li {
+    font-size: 13px;
+}
+
+.view-pas {
+    position: relative;
+    width: 15px;
+}
+
+.fa-eye {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.fa-eye-slash {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+label i{
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.view-pas i{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.icons i{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width:400px) {
+    .red input, .green input {
+        width: 200px !important;
+    }
+    .input-field input {
+        width: 220px;
+    }
+    .input-fields{
+
+        width: 300px;
+    }
+}
